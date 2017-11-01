@@ -1,4 +1,0 @@
-#Tue Oct 31 19:29:05 EET 2017
-base.0=D\:\\StudioProjects\\JustJava\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-renamed.0=classes.dex
-file.0=D\:\\StudioProjects\\JustJava\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1\\classes.dex
