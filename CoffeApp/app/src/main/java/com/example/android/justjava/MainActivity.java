@@ -44,14 +44,6 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-//    /**
-//     * This method displays the given quantity value on the screen.
-//     */
-//    private void displayPrice(int number) {
-//        TextView priceTextView = findViewById(R.id.price_text_view);
-//        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-//    }
-
     /**
      * This method increment the quantity of coffee
      */
