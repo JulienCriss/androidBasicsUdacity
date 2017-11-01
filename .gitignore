@@ -1,9 +1,9 @@
 *.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-.externalNativeBuild
+/CoffeApp/.gradle
+/CoffeApp/local.properties
+/CoffeApp/.idea/workspace.xml
+/CoffeApp/.idea/libraries
+/CoffeApp/.DS_Store
+/CoffeApp/build
+/CoffeApp/captures
+/CoffeApp/.externalNativeBuild
