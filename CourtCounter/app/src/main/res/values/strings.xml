@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CourtCounter</string>
+    <string name="app_name">Court Counter</string>
     <string name="team_a_header">Team A</string>
     <string name="team_a_score">0</string>
     <string name="_3_points_btn">+3 Points</string>
