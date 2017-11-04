@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when +2 points for Team A button is pressed
+     * This method is called when +2 points for Team B button is pressed
      */
     public void addTwoForTeamB(View view) {
         scoreTeamB += 2;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when Free Throw for Team A button is pressed
+     * This method is called when Free Throw for Team B button is pressed
      */
     public void freeThrowForTeamB(View view) {
         scoreTeamB += 1;
@@ -74,11 +75,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Display score for Team A
+     * Display score for Team B
      */
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Reset the score
+     */
+    public void resetScore(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+        Toast.makeText(MainActivity.this, "Score is now reset!", Toast.LENGTH_SHORT).show();
     }
 
 
