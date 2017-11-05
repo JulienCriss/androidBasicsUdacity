@@ -1,13 +1,11 @@
 package com.example.android.justjava;
 
-import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
-
-import java.text.NumberFormat;
 
 /**
  * This app displays an order form to order coffee.
@@ -23,33 +21,79 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the order button is clicked.
+     * Calculates the price of the order based on the current quantity.
+     *
+     * @return the price
      */
-    public void submitOrder(View view) {
-
-        int totalOfOrder = this.quantity * 5;
-        String priceMessage = "Total: ";
-
-        priceMessage = priceMessage + NumberFormat.getCurrencyInstance().format(totalOfOrder);
-        priceMessage = priceMessage + "\nThank you!";
-        displayMessage(priceMessage);
+    private int calculatePrice() {
+        return this.quantity * 5;
     }
 
     /**
      * This method displays the given quantity value on the screen.
      */
-    @SuppressLint("SetTextI18n")
-    private void display(int number) {
+
+    private void displayQuantity(int number) {
         TextView quantityTextView = findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
+
+    /**
+     * This method displayQuantity a message
+     */
+    public void displayMessage(String message) {
+        TextView orderSummaryView = findViewById(R.id.order_summary_text_view);
+        orderSummaryView.setText(message);
+    }
+
+    /**
+     * Display the summary of the order
+     *
+     * @param price           of command
+     * @param addWhippedCream Bool if user wants whipped cream
+     * @param addChocolate    Bool is user wants chocolate
+     * @param name            Name of customer
+     * @return The summary of the order
+     */
+    private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate, String name) {
+        String priceMessage = "Name: " + name;
+        priceMessage += "\nAdd whipped cream? " + addWhippedCream;
+        priceMessage += "\nAdd chocolate? " + addChocolate;
+        priceMessage += "\nQuantity: " + quantity;
+        priceMessage += "\nTotal: $" + price;
+        priceMessage += "\nThank you!";
+        return priceMessage;
+    }
+
+    /**
+     * This method is called when the order button is clicked.
+     */
+    public void submitOrder(View view) {
+
+        int price = calculatePrice();
+        // get Whipped Cream checkbox status
+        CheckBox whippedCreamCheckBOx = findViewById(R.id.whipped_cream_checkbox);
+        boolean hasWhippedCream = whippedCreamCheckBOx.isChecked();
+
+        // Get Chocolate checkbox status
+        CheckBox chocolateCheckBox = findViewById(R.id.chocolate_checkbox);
+        boolean hasChocolate = chocolateCheckBox.isChecked();
+
+        // Get the Name
+        EditText nameField = findViewById(R.id.name_field);
+        String customerName = nameField.getText().toString();
+
+        String summaryOrder = createOrderSummary(price, hasWhippedCream, hasChocolate, customerName);
+        displayMessage(summaryOrder);
+    }
+
 
     /**
      * This method increment the quantity of coffee
      */
     public void increment(View view) {
         this.quantity = this.quantity + 1;
-        display(this.quantity);
+        displayQuantity(this.quantity);
 
     }
 
@@ -58,14 +102,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         this.quantity = this.quantity - 1;
-        display(this.quantity);
+        displayQuantity(this.quantity);
     }
 
-    /**
-     * This method display a message
-     */
-    public void displayMessage(String message) {
-        TextView priceTextView = findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
-    }
+
 }
