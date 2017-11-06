@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Café App</string>
+    <string name="thank_you">Gracias!</string>
+    <string name="increment_coffee">+</string>
+    <string name="decrement_coffee">-</string>
+    <string name="topping_title">Ingredientes</string>
+    <string name="quantity_header">cantidad</string>
+    <string name="order_button_text">orden</string>
+    <string name="quantity_text">2</string>
+    <string name="price_text">$0</string>
+    <string name="price_title">resumen de orden</string>
+    <string name="whipped_cream_text">Crema batida</string>
+    <string name="chocolate_txt">Chocolate</string>
+    <string name="name_hint">Nombre</string>
+    <string name="order_summary_name">Nombre: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+</resources>

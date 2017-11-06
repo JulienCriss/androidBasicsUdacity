@@ -1,14 +1,22 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Coffee App</string>
     <string name="quantity_header">quantity</string>
     <string name="order_button_text">order</string>
-    <string name="quantity_text">0</string>
+    <string name="quantity_text">2</string>
     <string name="price_text">$0</string>
     <string name="price_title">Order Summary</string>
     <string name="increment_coffee">+</string>
     <string name="decrement_coffee">-</string>
-    <string name="topping_text">Toppings</string>
+    <string name="topping_title">Toppings</string>
     <string name="whipped_cream_text">Whipped Cream</string>
-    <string name="chocolate_txt">Chocolate</string>
     <string name="name_hint">Name</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="order_summary_name">Name: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="chocolate_txt">Chocolate</string>
+    <string name="order_summary_whipped_cream">Add whipped cream? <xliff:g example="true" id="addWhippedCream">%b</xliff:g></string>
+    <string name="order_summary_add_chocolate">Add chocolate?
+        <xliff:g example="true" id="addChocolate">%b</xliff:g></string>
+    <string name="quantity">Quantity: <xliff:g example="5" id="quantity">%d</xliff:g></string>
+    <string name="total">Total: <xliff:g example="$25" id="total">%s</xliff:g></string>
 </resources>

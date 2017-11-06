@@ -19,37 +19,22 @@
             android:inputType="textCapWords" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/topping_text"
-            android:textAllCaps="true" />
+            style="@style/HeaderTitle"
+            android:text="@string/topping_title" />
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:paddingLeft="24dp"
-            android:text="@string/whipped_cream_text"
-            android:textSize="16sp" />
+            style="@style/CheckBoxItems"
+            android:text="@string/whipped_cream_text" />
 
         <CheckBox
             android:id="@+id/chocolate_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:paddingLeft="24dp"
-            android:text="@string/chocolate_txt"
-            android:textSize="16sp" />
+            style="@style/CheckBoxItems"
+            android:text="@string/chocolate_txt" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/quantity_header"
-            android:textAllCaps="true" />
+            style="@style/HeaderTitle"
+            android:text="@string/quantity_header" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -79,22 +64,6 @@
                 android:text="@string/increment_coffee" />
 
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/price_title"
-            android:textAllCaps="true" />
-
-        <TextView
-            android:id="@+id/order_summary_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/price_text"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
 
         <Button
             android:layout_width="wrap_content"
