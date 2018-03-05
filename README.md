@@ -4,3 +4,6 @@
 
 So, I've decided to learn how to develop Android apps. **Great!** 
 So I decided to follow some basic Android tutorials made available by Google on the Udacity platform to guide me how an Android application is structured and what steps and concepts are needed to make an application.
+
+
+**Wish me luck and let's make the world a better application! :)**
